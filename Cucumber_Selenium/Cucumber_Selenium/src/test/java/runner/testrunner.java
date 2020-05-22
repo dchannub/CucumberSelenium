@@ -6,9 +6,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = "src/test/javaFeatures"
-,glue= {"seleniumgluecode"}
-,plugin = { "pretty", "html:target/htmlreports" }  // for html reports.
+features = "src/test/java/features"
+,glue= {"stepDefinitions"}
+,plugin = { "pretty", "html:target//cucumber-reports" ,// for html reports.
+		 // "junit:target//cucumber-reports//Cucumber.xml",
+		 "json:target//cucumber-reports//cucumber.json" } 
+,monochrome = true
 )
 
 public class testrunner {
