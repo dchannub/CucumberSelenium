@@ -8,6 +8,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 features = "src/test/javaFeatures"
 ,glue= {"seleniumgluecode"}
+,plugin = { "pretty", "html:target/htmlreports" }  // for html reports.
 )
 
 public class testrunner {
