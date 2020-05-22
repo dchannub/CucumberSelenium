@@ -11,5 +11,3 @@ Feature: Login Feature
     
     Then success message is displayed
     
-    
-    ' need to continue
